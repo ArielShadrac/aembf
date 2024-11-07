@@ -1,0 +1,23 @@
+{
+    "builds": [
+      {
+        "src": "aembf/wsgi.py",
+        "use": "@vercel/python",
+        "config" : {"maxLambdaSize": "15mb", "runtime":"python3.10"},
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "aembf/wsgi.py"
+      }
+    ],
+    "rewrites": [
+      {
+        "src": "/(.*)",
+        "destination": "/api/index.js"
+      }
+    ]
+
+  }
+  

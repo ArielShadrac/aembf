@@ -1,0 +1,61 @@
+{% extends 'base/navbar.html' %}
+{% load static %}
+{% block content %}
+
+      <main class="container py-6">
+        <div class="container my-5">
+          <div class="row p-1 pb-0 pe-lg-0  align-items-center border shadow-sm">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+              <h1 class="display-1 fw-bold lh-1 text-body-emphasis">Standing Committee on Medical Education</h1>
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-sm">
+              <a href="{% static 'assets/img/scome.png' %}" data-lightbox="models">
+                <img class="rounded-lg-3" src="{% static 'assets/img/scome.png' %} " alt="" width="100%" height="400" style="object-fit: cover !important;">
+              </a>
+              </div>
+          </div>
+        </div>
+
+        <section class="pt-5" id="actu">
+
+          <div class="container mb-8">
+
+            <p>L'enseignement médical devrait être une préoccupation de chaque étudiant en médecine car il détermine non seulement la qualité des futurs médecins mais aussi la qualité des soins de santé. La Fédération internationale des associations d'étudiants en médecine (IFMSA) dispose d'un organe dédié qui vise à mettre en place un environnement d'apprentissage optimal pour tous les étudiants en médecine du monde entier, le Comité permanent de l'enseignement médical (SCOME). Grâce à tous nos efforts conjoints, nous travaillons à créer des changements durables dans le monde entier, pour nous-mêmes en tant qu'étudiants en médecine, pour les générations à venir et pour nos futurs patients et nos communautés qui sont en fait les bénéficiaires finaux de notre éducation.</p>
+
+            <br><h1>Historique du
+              Comité</h1><br>
+            <p>
+              Le SCOME a été l'un des premiers comités permanents de l'IFMSA dès sa fondation en 1951. Il sert de forum de discussion pour les étudiants intéressés par les différents aspects de l'enseignement médical dans l'espoir de poursuivre et d'atteindre son objectif. Aujourd'hui, le SCOME travaille principalement au renforcement des capacités en matière d'enseignement médical.
+
+            SCOME propose plusieurs plateformes et méthodes pour former les étudiants en médecine du monde entier sur diverses questions liées à l'enseignement médical. Grâce à ces connaissances, ils sont en mesure de plaider pour faire partie de la chaîne de prise de décision. SCOME considère les étudiants en médecine comme des acteurs importants dans la création, le développement et la mise en œuvre des systèmes d'enseignement médical.
+            </p>
+            <br><h1>Vision</h1><br>
+            <p>Les étudiants en médecine sont impliqués de manière significative dans leurs systèmes d'enseignement médical respectifs et représentent la voix des étudiants dans les questions concernant l'enseignement médical en tant que parties prenantes à part entière à tous les niveaux afin de créer un enseignement médical de qualité dans le monde entier et d'acquérir les compétences appropriées qui leur permettront de répondre aux besoins de santé des communautés qu'ils ont pour mandat de servir.</p>
+            <br><h1>Mission</h1><br>
+            <p>SCOME est une plateforme qui crée un environnement partagé où les étudiants en médecine contribuent, réfléchissent et travaillent au développement de l'enseignement médical par le biais d'activités dirigées par les étudiants. SCOME permet aux étudiants en médecine d'atteindre leur plein potentiel en tant que leaders de l'enseignement médical grâce à des activités visant l'éducation, la recherche, le développement des capacités, l'engagement significatif des jeunes et le plaidoyer afin de créer un impact efficace au niveau local, national, régional et international.</p>
+            
+            <h6><a href="https://ifmsa.org/standing-committees/medical-education/">en savoir plus</a></h6>
+          </div>
+
+
+          <div class="container">
+           
+            <div class="gallery">
+              <h2>Gallerie d'images</h2>
+              <p>Cliquer sur l'image de votre choix afin de l'afficher</p>
+              <div class="gallery_album">
+                  {%for scome in scome%}
+                  <a href="{{ scome.image.url }}" data-lightbox="models", data-title="{{ scome.decription }}", class="photo">
+                          <img src="{{ scome.image.url }}" alt="">
+                  </a>
+                  {% endfor %}
+              </div>
+          </div>
+          </div><!-- end of .container-->
+  
+  
+        </section>
+      </main>
+      
+      {% include 'base/footer.html' %}
+      {% endblock %}

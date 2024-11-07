@@ -1,0 +1,519 @@
+{% extends 'base/navbar.html' %}
+{% load static %}
+{% block content %}
+
+      <section class="slider" style="height: 100vh !important;">
+          <div class="list">
+              <div class="item active">
+                  <div class="image" style="background-image: url('static/assets/img/Top1.jpg') !important;"></div>
+                  <div class="content">
+                      <h2 style="color: #ffff; font-size: 100px; line-height: -10px;">Association des Etudiants en Medecine du Burkina Faso</h2>
+
+                  </div>
+              </div>
+              <div class="item ">
+                  <div class="image" style="background-image: url('static/assets/img/Top2.jpg') !important;"></div>
+                  <div class="content">
+                      <h2 style="color: #ffff; font-size: 85px">AEM-BF, Pour qu'être étudiant en médécine ne soit pas un mot mais un engagement social</h2>
+                    
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="image" style="background-image: url('static/assets/img/Top3.jpg') !important;"></div>
+                  <div class="content">
+                    <h2 style="color: #ffff; font-size: 175px">AEM-BF, On Adore !!!</h2>
+                    
+                  </div>
+              </div>
+          </div>
+          <div class="arrows">
+              <button id="prev">
+                  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+                  </svg>
+              </button>
+              <button id="next">
+                  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                  </svg>
+              </button>
+          </div>
+      </section>
+
+    
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="pt-5 pt-md-9 hidden" id="service" >
+
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-4 col-sm-6 mb-6" data-aos="fade-up" data-aos-duration="1200">
+              <div class="card shadow-sm rounded-3 text-center align-items-center">
+                <div class="card-body p-xxl-5 p-4">  <img src="{% static 'assets/img/steps/map.svg'%}" width="75" alt="Service" />
+                  <h4 class="mb-3">Present dans 5 LMO</h4>
+                  <p class="mb-0 fw-medium">Nous sommes presents dans toutes les facutlté de medecine du pays</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-6" data-aos="fade-up" data-aos-duration="2000">
+              <div class="card shadow-sm rounded-3 text-center align-items-center">
+                <div class="card-body p-xxl-5 p-4"> <img src="{% static 'assets/img/steps/building.svg'%}" width="75" alt="Service" />
+                  <h4 class="mb-3">Plus de 15 ans d'existances</h4>
+                  <p class="mb-0 fw-medium">Notre associations a été créée depuis 2007</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-6" data-aos="fade-up" data-aos-duration="2800">
+              <div class="card shadow-sm rounded-3 text-center align-items-center">
+                <div class="card-body p-xxl-5 p-4"> <img src="{% static 'assets/img/steps/leaf.svg'%}" width="75" alt="Service" />
+                  <h4 class="mb-3">+ de 2000 membres</h4>
+                  <p class="mb-0 fw-medium">Nous comptons au sein de association plus de 2000 membres</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div><!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+      
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="hidden" id="about" style="overflow-x: hidden !important;">
+
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="text-start">
+                <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize mb-5">A propos de nous</h3>
+              </div>
+              <div class="d-flex align-items-start mb-5"  data-aos="fade-right" data-aos-duration="1000">
+                <div class="bg-primary me-sm-4 me-3 p-3" style="border-radius: 13px"> <img src="{% static 'assets/img/steps/selection.svg' %}" width="22" alt="steps" /></div>
+                <div class="flex-1">
+                  <h5 class="text-secondary fw-bold fs-0">Crée le 17 Juillet 2027</h5>
+                  <p>Par un groupe d'étudiants en médecine issus de  <br class="d-none d-sm-block">  l'Université Joseph Ki Zerbo et de l'Université Thomas 
+                    d'Aquin</p>
+                          
+                </div>
+              </div>
+              <div class="d-flex align-items-start mb-5" data-aos="fade-right" data-aos-duration="1500">
+                <div class="bg-primary me-sm-4 me-3 p-3" style="border-radius: 13px"> <img src="{% static 'assets/img/steps/selection.svg' %}" width="22" alt="steps" /></div>
+                <div class="flex-1">
+                  <h5 class="text-secondary fw-bold fs-0">Extension</h5>
+                  <p>l'AEM-BF a vu ultérieurement les facultés <br class="d-none d-sm-block">de Bobo Dioulasso, 
+                    Ouahigouya et Kombissiri la rejoindre</p>
+
+                </div>
+              </div>
+              <div class="d-flex align-items-start mb-5" data-aos="fade-right" data-aos-duration="2000">
+                <div class="bg-primary me-sm-4 me-3 p-3" style="border-radius: 13px"> <img src="{% static 'assets/img/steps/selection.svg' %}" width="22" alt="steps" /></div>
+                <div class="flex-1">
+                  <h5 class="text-secondary fw-bold fs-0">Reconnaissance</h5>
+                  <p>Plusieurs membres ont reçu  des distinctions régionales<br class="d-none d-sm-block"> 
+                     et internationales, dont le prix <span class="fw-bold" style="font-style: italic;">Rex Crosslesy</span> de l'IFMSA en 2015</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 ">
+              <div class="card position-relative shadow rounded-2" data-aos="fade-left" data-aos-duration="1800">
+                <div class="position-absolute z-index--1 me-10 me-xxl-0" > <img src="{% static 'assets/img/steps/bg.png' %}" style="max-width:550px;" alt="shape" /></div>
+                <div class="card rounded-2"> 
+                  <video class="w-100 h-100 rounded-2" controls autoplay muted loop src="{% static 'assets/video/*Locko - O bosso (Clip Officiel).mp4' %}"></video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="pt-5" id="actu" style="overflow-x: hidden !important;">
+
+        <div class="container">
+          <div class="mb-7 text-center">
+            <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">Actualités</h3>
+            <h5 class="text-secondary shadow-hover"><a href="{% url 'info' %}">Cliquez ici Tout voir</a></h5>
+          </div>
+          <div class="row">
+            {% for news in news%}
+              <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-duration="1800">
+                <a href="{% url 'new_detail' news.pk %}">
+                <div class="card overflow-hidden"> 
+                  <img class="rounded-2" src="{{ news.image.url }}" style="object-fit: cover !important;" alt="" height="500"/>
+                  <div class="py-4">
+                    <div class="d-flex align-items-center"> <span class="fs-0 fw-medium text-start">{{ news.title }} </span></div>
+                  </div>
+                </div>
+              </a>
+              </div>
+            {% empty %}
+            <div class="col-lg-12 d-flex justify-content-center align-items-center" style="height: 50vh;" data-aos="zoom-in" data-aos-duration="2000">
+              <h2  class="d-flex align-items-center"><span style="color: red !important; font-size: 40px;">&times; </span> Pas d'Actualités pour l'instant</h2>
+            </div>
+            {% endfor %}
+          </div>
+        </div><!-- end of .container-->
+
+      </section>
+<!-- <section> close ============================-->
+<!-- ============================================-->
+
+<!-- locality -->
+
+
+<section style="overflow-x: hidden !important;">
+  <div class="mb-7 text-center">
+    <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">Nos LMO</h3>
+    <h5 class="text-secondary shadow-hover">Nous comptons 5 LMO</h5>
+  </div>
+
+  <div class="locality" >
+
+    <!-- list locality-items -->
+    <div class="list">
+      <div class="locality-item active">
+          <img src="{% static 'assets/img/ujkz.jpg' %}">
+          <div class="content" style='color:#ffffff !important;'>
+              <p>Section</p>
+              <h2>UJKZ</h2>
+              <p>
+                  Université Joseph Ki Zerbo
+              </p>
+          </div>
+      </div>
+      <div class="locality-item">
+          <img src="{% static 'assets/img/2.jpg' %}">
+          <div class="content" style='color:#ffffff !important;'>
+              <p>Section</p>
+              <h2>USTA</h2>
+              <p>
+                  Université Saint Thomas D'Aquin
+              </p>
+          </div>
+      </div>
+      <div class="locality-item">
+          <img src="{% static 'assets/img/inssa.jpg' %}">
+          <div class="content" style='color:#ffffff !important;'>
+              <p>Section</p>
+              <h2>INSSA</h2>
+              <p>
+               Univesité Nazi Boni
+              </p>
+          </div>
+      </div>
+      <div class="locality-item">
+          <img src="{% static 'assets/img/1.jpg' %}">
+          <div class="content" style='color:#ffffff !important;'>
+              <p>Section</p>
+              <h2>ULBO</h2>
+              <p>
+                  Université Ledea Bernar OUEDRAOGO
+              </p>
+          </div>
+      </div>
+      <div class="locality-item">
+        <img src="{% static 'assets/img/usdao.jpg' %}">
+          <div class="content" style='color:#ffffff !important;'>
+              <p>Section</p>
+              <h2>USDAO</h2>
+              <p>
+                  Université Saint Dominique D'Afrique de l'Ouest
+              </p>
+          </div>
+      </div>
+    </div>
+    <!-- button locality-arrows -->
+    <div class="locality-arrows">
+      <button id="localityPrev"><</button>
+      <button id="localityNext">></button>
+    </div>
+    <!-- thumbnail -->
+    <div class="thumbnail">
+      <div class="locality-item active">
+          <img src="{% static 'assets/img/ujkz.png' %}">
+          <div class="content fw-bold" style="color: black;">
+              UJKZ
+          </div>
+      </div>
+      <div class="locality-item">
+          <img src="{% static 'assets/img/usta.png' %}">
+          <div class="content fw-bold" style="color: black;">
+              USTA
+          </div>
+      </div>
+      <div class="locality-item">
+          <img src="{% static 'assets/img/inssa.png' %}">
+          <div class="content fw-bold" style="color: black;">
+              INSSA
+          </div>
+      </div>
+      <div class="locality-item">
+          <img src="{% static 'assets/img/uohg.png' %}">
+          <div class="content fw-bold" style="color: black;">
+              UOHG
+          </div>
+      </div>
+      <div class="locality-item">
+          <img src="{% static 'assets/img/usdao.png' %}">
+          <div class="content fw-bold" style="color: black;">
+              USDAO
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+      <!-- ================== Inscription ==================  -->
+    <section style="padding-top: 1rem;" >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-5 col-lg-6 order-0 order-md-1 text-end" data-aos="fade-left" data-aos-duration="2200"><img class="pt-7 pt-md-0 hero-img" src="{% static 'assets/img/Atou.png' %}" alt="hero-header" /></div>
+          <div class="col-md-7 col-lg-6 text-md-start text-center py-6">
+            <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize mb-4">Comment faire parti de l'association</h3>
+            <div class="d-flex align-items-start mb-5" data-aos="fade-right" data-aos-duration="1500">
+              <div class="bg-primary me-sm-4 me-3 p-3" style="border-radius: 13px"> <img src="{% static 'assets/img/steps/selection.svg' %}" width="22" alt="steps" /></div>
+              <div class="flex-1">
+                <h5 class="text-secondary fw-bold fs-0">Prendre contact</h5>
+                <p>Prennez contact avec un(e) tresorièr(e) ou avec un chef de comité afin d'avoir plus d'informations sur la procédure d'inscription</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-start mb-5" data-aos="fade-right" data-aos-duration="2000">
+              <div class="bg-primary me-sm-4 me-3 p-3" style="border-radius: 13px"> <img src="{% static 'assets/img/steps/selection.svg' %}" width="22" alt="steps" /></div>
+              <div class="flex-1">
+                <h5 class="text-secondary fw-bold fs-0">S'inscrire</h5>
+                <p>Payez votre cotisation qui s'elève à 2.000Fcfa et beneficiez d'une carte de membre</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-start mb-5" data-aos="fade-right" data-aos-duration="2500">
+              <div class="bg-primary me-sm-4 me-3 p-3" style="border-radius: 13px"> <img src="{% static 'assets/img/steps/selection.svg' %}" width="22" alt="steps" /></div>
+              <div class="flex-1">
+                <h5 class="text-secondary fw-bold fs-0">Rejoindre un comité</h5>
+                <p>Integrez le comité de votre choix, soyez dynamique, participez aux activités, soyez même lead et restez à jour de vos cotisations.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- ================== Inscription ==================  -->
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section id="testimonial" style="min-height: 100vh !important; display: flex; justify-content: center; align-items: center;">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="mb-8 text-start">
+                <h5 class="text-secondary" data-aos="fade-right" data-aos-duration="2000">Temoignages</h5>
+                <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize" data-aos="fade-right" data-aos-duration="2500">Ce que les gens pensent de nous</h3>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class=" ps-5 ps-lg-0">
+                <div class="carousel slide carousel-fade position-static" id="testimonialIndicator" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button class="active" type="button" data-bs-target="#testimonialIndicator" data-bs-slide-to="0" aria-current="true" aria-label="Testimonial 0"></button>
+                    <button class="false" type="button" data-bs-target="#testimonialIndicator" data-bs-slide-to="1" aria-current="true" aria-label="Testimonial 1"></button>
+                    <button class="false" type="button" data-bs-target="#testimonialIndicator" data-bs-slide-to="2" aria-current="true" aria-label="Testimonial 2"></button>
+                    <button class="false" type="button" data-bs-target="#testimonialIndicator" data-bs-slide-to="3" aria-current="true" aria-label="Testimonial 3"></button>
+                    <button class="false" type="button" data-bs-target="#testimonialIndicator" data-bs-slide-to="4" aria-current="true" aria-label="Testimonial 4"></button>
+                    <button class="false" type="button" data-bs-target="#testimonialIndicator" data-bs-slide-to="5" aria-current="true" aria-label="Testimonial 5"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item position-relative active">
+                      <div class="card shadow" style="border-radius:10px;">
+                        <div class="position-absolute start-0 top-0 translate-middle"> <img class="rounded-circle fit-cover" src="{% static 'assets/img/yves.jpg' %}" height="100" width="100" alt="" /></div>
+                        <div class="card-body p-4">
+                          <p class="fw-medium mb-4">&quot;En tant qu'ancien membre actif de l'AEM-BF, je peux attester de l'impact positif qu'elle a eu sur ma vie professionnelle, en effet j'ai eu l'opportunité de rencontrer de nombreux jeunes du monde entier, enrichissant ainsi mon expérience et mes perspectives.&quot;</p>
+                          <h5 class="text-secondary">Dr KABORE KISWENDSIDA YVES ROLAND</h5>
+                          <p class="fw-medium fs--1 mb-0">Président National (2021-2022), ⁠Ancien IFMSA Development Assistant for Africa, ⁠Ancien IFMSA Finance Assistant for Africa</p>
+                        </div>
+                      </div>
+                      <div class="card shadow-sm position-absolute top-0 z-index--1 mb-3 w-100 h-100" style="border-radius:10px;transform:translate(25px, 25px)"> </div>
+                    </div>
+                    <div class="carousel-item position-relative ">
+                      <div class="card shadow" style="border-radius:10px;">
+                        <div class="position-absolute start-0 top-0 translate-middle"> <img class="rounded-circle fit-cover" src="{% static 'assets/img/DSC_9886.jpg' %}" height="100" width="100" alt="" /></div>
+                        <div class="card-body p-4">
+                          <p class="fw-medium mb-4">&quot;Grâce à l'association des étudiants en médecine, j'ai pu participer à divers projets communautaires, ce qui a profondément influencé mon approche du métier de médecin en me sensibilisant davantage aux besoins sociaux des patients.&quot;</p>
+                          <h5 class="text-secondary">Dr IBRAHIM KARAMA</h5>
+                          <p class="fw-medium fs--1 mb-0">Ancien VPICB National (2021-2022)</p>
+                        </div>
+                      </div>
+                      <div class="card shadow-sm position-absolute top-0 z-index--1 mb-3 w-100 h-100" style="border-radius:10px;transform:translate(25px, 25px)"> </div>
+                    </div>
+                    <div class="carousel-item position-relative ">
+                      <div class="card shadow" style="border-radius:10px;">
+                        <div class="position-absolute start-0 top-0 translate-middle"> <img class="rounded-circle fit-cover" src="{% static 'assets/img/razack.jpg' %}" height="100" width="100" alt="" /></div>
+                        <div class="card-body p-4">
+                          <p class="fw-medium mb-4">&quot;Le programe SCOPE a enrichi ma formation médicale en me permettant de participer à des stages cliniques internationaux tout en établissant 
+                            des liens précieux avec des collègues du monde entier. C'est une expérience exceptionnelle pour les étudiants en médecine qui aspirent à 
+                            l'apprentissage clinique et à l'explration culturelle.&quot;</p>
+                          <h5 class="text-secondary">Yasser Abdoul Razack ZABSONRE</h5>
+                          <p class="fw-medium fs--1 mb-0">LOME/UJKZ (2021-2022)</p>
+                        </div>
+                      </div>
+                      <div class="card shadow-sm position-absolute top-0 z-index--1 mb-3 w-100 h-100" style="border-radius:10px;transform:translate(25px, 25px)"> </div>
+                    </div>
+                    <div class="carousel-item position-relative ">
+                      <div class="card shadow" style="border-radius:10px;">
+                        <div class="position-absolute start-0 top-0 translate-middle"> <img class="rounded-circle fit-cover" src="{% static 'assets/img/rose.jpg' %}" height="100" width="100" alt="" /></div>
+                        <div class="card-body p-4">
+                          <p class="fw-medium mb-4">&quot;Intégrer l’AEM-BF fut la meilleure 
+                            décision que j’ai prise depuis mon arrivée à l’université. C’est un milieu d’apprentissage, 
+                            de travail, de rencontre avec des jeunes d’ici et d’ailleurs. En tant que médecin en formation 
+                            c’est surtout le meilleur endroit pour servir sa communauté. &quot;</p>
+                          <h5 class="text-secondary">Rose Armelle YAMEOGO</h5>
+                          <p class="fw-medium fs--1 mb-0">President AEM/UJKZ(2023-2024), Ambassadrice de la lutte contre le cancer du sein</p>
+                        </div>
+                      </div>
+                      <div class="card shadow-sm position-absolute top-0 z-index--1 mb-3 w-100 h-100" style="border-radius:10px;transform:translate(25px, 25px)"> </div>
+                    </div>
+                    <div class="carousel-item position-relative ">
+                      <div class="card shadow" style="border-radius:10px;">
+                        <div class="position-absolute start-0 top-0 translate-middle"> <img class="rounded-circle fit-cover" src="{% static 'assets/img/machilda.jpg' %}" height="100" width="100" alt="" /></div>
+                        <div class="card-body p-4">
+                          <p class="fw-medium mb-4">&quot;Elle forme, elle développe le leadrship, l'esprit d'équipe et le sens de la cohesion. <br>❤️ Merci AEM&quot;</p>
+                          <h5 class="text-secondary">B Machilda OUEDRAOGO</h5>
+                          <p class="fw-medium fs--1 mb-0">LPH/UJKZ (2023-2024)</p>
+                        </div>
+                      </div>
+                      <div class="card shadow-sm position-absolute top-0 z-index--1 mb-3 w-100 h-100" style="border-radius:10px;transform:translate(25px, 25px)"> </div>
+                    </div>
+                  
+                  </div>
+                  <div class="carousel-navigation d-flex flex-column flex-between-center position-absolute end-0 top-lg-50 bottom-0 translate-middle-y z-index-1 me-3 me-lg-0" style="height:60px;width:20px;">
+                    <button class="carousel-control-prev position-static" type="button" data-bs-target="#testimonialIndicator" data-bs-slide="prev"><</button>
+                    <button class="carousel-control-next position-static" type="button" data-bs-target="#testimonialIndicator" data-bs-slide="next">></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- end of .container-->
+
+      </section>
+      
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="pt-6 hidden">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="mb-7 text-start">
+                <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">Contacts</h3>
+                <p>Vous pouvez retrouver nos differents LMO via ces differentes carte qui sont affichés ici</p>
+                <h5>Ouagadougou, Burkina Faso</h5>
+                <h5>mail : aem-burkinafaso@ifmsa.org</h5>
+              </div>
+            </div>
+
+            <div class="col-lg-6" style="overflow: hidden;">
+              <div id="map" style="width:100%; height:400px; overflow: hidden;">
+                <div id="myCarousel" class="carousel slide rounded-2 " data-bs-ride="carousel">
+                 <div class="carousel-indicators">
+                   <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                   <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                   <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                   <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                   <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                 </div>
+                 <div class="carousel-inner rounded-2">
+                   <!-- ujkz -->
+                   <div class="carousel-item  active" style="width:100%; height:400px;"  data-bs-interval="5000">
+                     <div class="map-container">
+                         <iframe class="rounded-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15588.370003152522!2d-1.5224369824844053!3d12.376735877813509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2ebf0fcf93e7b9%3A0x9866a8cd3078b9fa!2sUniversit%C3%A9%20Joseph%20Ki%20Zerbo!5e0!3m2!1sfr!2sbf!4v1718475646136!5m2!1sfr!2sbf" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                     <div class="carousel-caption">
+                       <h4>Univeristé Joseph Ki Zerbo</h4>
+                       </div>
+                   </div>
+
+
+                   <div class="carousel-item" style="width:100%; height:400px;" data-bs-interval="5000">
+                      <div class="map-container">
+                        <iframe class="rounded-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3896.979299105581!2d-1.418294!3d12.384317999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2eb91c1c53ea1d%3A0x93fb03e0af03146!2sUniversit%C3%A9%20Saint%20Thomas%20d&#39;Aquin%20saaba!5e0!3m2!1sfr!2sbf!4v1728066342834!5m2!1sfr!2sbf" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                     <div class="carousel-caption">
+                       <h4>USTA</h4>
+                       </div>
+                   </div>
+
+                   <div class="carousel-item" style="width:100%; height:400px;" data-bs-interval="5000">
+                     <div class="map-container">
+                         <iframe class="rounded-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d489.2602319059546!2d-4.363629520832069!3d11.181575133300313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe34fdc4cb282869%3A0xff2ff517aa6bb7d!2sINSTITUT%20SUPERIEUR%20DES%20SCIENCES%20DE%20LA%20SANTE%20(IN.S.SA)!5e0!3m2!1sfr!2sbf!4v1728066088041!5m2!1sfr!2sbf" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                     <div class="carousel-caption">
+                       <h4>INSSA</h4>
+                       </div>
+                   </div>
+
+                   <div class="carousel-item" style="width:100%; height:400px;" data-bs-interval="5000">
+                     <div class="map-container">
+                         <iframe class="rounded-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.912049478128!2d-2.3914401000000005!3d13.479516900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2fff9818c6e807%3A0x58ac7f8885d6dc77!2sUniversit%C3%A9%20L%C3%A9dea%20Bernard%20OUEDRAOGO(ULBO)!5e0!3m2!1sfr!2sbf!4v1728065833462!5m2!1sfr!2sbf" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                     <div class="carousel-caption">
+                       <h4>Univeristé Lédea Bernard OUEDRAOGO</h4>
+                       </div>
+                   </div>
+
+                   <div class="carousel-item" style="width:100%; height:400px;" data-bs-interval="5000">
+                     <div class="map-container">
+                         <iframe class="rounded-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.787278314129!2d-1.3842884000000002!3d12.058152200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2c1d49b97167f7%3A0x104c1dceae4cb1ed!2sUniversit%C3%A9%20Saint%20Dominique%20d&#39;Afrique%20de%20l&#39;Ouest%20USDAO!5e0!3m2!1sfr!2sbf!4v1728066922944!5m2!1sfr!2sbf" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                     <div class="carousel-caption">
+                       <h4>USDAO</h4>
+                       </div>
+                   </div>
+                
+                 </div>
+
+                 <div class="carousel-control">
+                   <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="visually-hidden">Previous</span>
+                   </button>
+                   <button class="carousel-control-next " type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="visually-hidden">Next</span>
+                   </button>
+                 </div>
+              
+               </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+      <script>
+        AOS.init();
+      </script>
+      
+      {% include 'base/footer.html' %}
+      {% endblock %}

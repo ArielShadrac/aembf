@@ -1,0 +1,180 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US" data-bs-theme="auto">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>AEM-BF - Association des Etudiants en Medecine du Burkina Faso</title>
+
+
+    <!-- ===============================================-->
+    <!--    Icons -->
+    <!-- ===============================================-->
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/Logo.gif' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/Logo.gif' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/Logo.gif' %}">
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="manifest" href="{% static 'assets/pwa/manifest.json' %}"/>
+    <link href="{% static 'assets/css/feuille.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/vendors/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendors/aos/dist/aos.css' %}" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css'%}">
+
+  </head>
+
+<!-- =========================== Lighted Box =========================== -->
+
+<style>
+  
+.gallery{
+  margin-top: 5rem;
+}
+
+.gallery h2{
+  margin: 1rem 0;
+  font-size: 18px;
+}
+
+.gallery P{
+  position: sticky;
+  width: 100%;
+  top: 50px;
+}
+
+.gallery_album{
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2vmin;
+  margin: 20px 0;
+}
+
+.gallery_album .photo{
+  list-style-type: none;
+  height: 350px;
+  flex-grow: 1;
+  border-radius: 10px;
+}
+
+.gallery_album img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+} 
+
+
+
+</style>
+
+<!-- =========================== Lighted Box =========================== -->
+  <body>
+
+    <!-- ====================================================================================================================== -->
+    <nav class="navbar navbar-expand-lg fixed-top py-2 d-block" aria-label="Offcanvas navbar large" style="background-color: #ffffffec !important;">
+        <div class="container"><a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'assets/img/Logo.gif' %}" height="50" alt="logo" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><img class="navbar-toggler-icon" src="{% static 'assets/img/menu.png'%}" alt="" height="32" ></button>
+          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-lg-center align-items-start">
+              <li class="nav-item "><a class="nav-link fw-medium" aria-current="page" href="{% url 'index' %}">Acceuil</a></li>
+              <li class="nav-item "><a class="nav-link fw-medium" aria-current="page" href="{% url 'index' %}#about">A propos de nous</a></li>
+              {% for news in news %}
+              <li class="nav-item "><a class="nav-link fw-medium" aria-current="page" href="{% url 'info' %}">Actualités</a></li>
+              {% empty %}
+              {% endfor %}
+              <li class="nav-item dropdown">
+                <a class="nav-link fw-medium dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false" href="">Comités</a>
+                <ul class="dropdown-menu rounded-0">
+                  <li><a class="dropdown-item" href="{% url 'scope' %}">SCOPE</a></li>
+                  <li><a class="dropdown-item" href="{% url 'scome' %}">SCOME</a></li>
+                  <li><a class="dropdown-item" href="{% url 'scoph' %}">SCOPH</a></li>
+                  <li><a class="dropdown-item" href="{% url 'score' %}">SCORE</a></li>
+                  <li><a class="dropdown-item" href="{% url 'scorp' %}">SCORP</a></li>
+                  <li><a class="dropdown-item" href="{% url 'scora' %}">SCORA</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-medium"  role="button" data-bs-toggle="dropdown" aria-expanded="false">Nos Bureaux</a>
+                <ul class="dropdown-menu rounded-0">
+                  <li><a class="dropdown-item" href="{% url 'BN' %}">National</a></li>
+                  <hr>
+                  <li><a class="dropdown-item" href="{% url 'UJKZ' %}">LMO UJKZ</a></li>
+                  <li><a class="dropdown-item" href="{% url 'USTA' %}">LMO USTA</a></li>
+                  <li><a class="dropdown-item" href="{% url 'INSSA' %}">LMO INSSA</a></li>
+                  <li><a class="dropdown-item" href="{% url 'UOHG' %}">LMO ULBO</a></li>
+                  <li><a class="dropdown-item" href="{% url 'USDAO' %}">LMO USDAO</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-medium"  role="button" data-bs-toggle="dropdown" aria-expanded="false">Nos outils</a>
+                <ul class="dropdown-menu rounded-0">
+                  <li><a class="dropdown-item" href="{% url 'recherche' %}">Protocols de recherche</a></li>
+                  <li><a class="dropdown-item" href="{% url 'media' %}">Mediathèque</a></li>
+               
+                </ul>
+              </li>
+              <li class="nav-item "><a class="nav-link fw-medium" aria-current="page" href="{% url 'blog' %}">Blog</a></li>
+              <!-- <li class="nav-item "><a class="btn btn-outline-dark order-1 order-lg-0 fw-medium" href="#!">Se connecter</a></li> -->
+            </ul>
+          </div>
+        </div>
+    </nav>
+      
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+    {% block content %}
+    {% endblock %}
+    </main>
+
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="{% static 'vendors/@popperjs/popper.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'vendors/is/is.min.js' %}"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="{% static 'vendors/fontawesome/all.min.js' %}"></script>
+    <script src="{% static 'assets/js/theme.js' %}"></script>
+    <script src="{% static 'assets/js/app.js' %}"></script>
+    <script src="{% static 'assets/js/locality.js' %}"></script>
+    <script src="{% static 'assets/js/color-modes.js' %}"></script>
+    <script src="{% static 'assets/pwa/serviceworker.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vendors/ckeditor/ckeditor-init.js'%}"></script>
+    <script type="text/javascript" src="{% static 'vendors/ckeditor/ckeditor/ckeditor.js'%}"></script>
+    <script>window.CKEDITOR_BASEPATH = '/static/vendors/ckeditor/ckeditor/';</script>
+    <script>window.CKEDITOR_BASEPATH = '/static/vendors/ckeditor/';</script>
+    <script src="{% static 'assets/vendors/aos/dist/aos.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox-plus-jquery.js' %}"></script>
+    <script>
+      AOS.init();
+      if ('serviceWorker' in navigator){
+        navigator.serviceWorker.register('/static/assets/pwa/serviceworker.js').then(
+          function(registration){
+            console.log('Service Worker registed with scope :', registration.scope);
+          }).catch(function(error){
+            console.log('Service Worker registration failed', error);
+          });
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Volkhov:wght@700&amp;display=swap" rel="stylesheet">
+  </body>
+
+</html>

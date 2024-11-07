@@ -1,0 +1,73 @@
+{% extends 'base/navbar.html' %}
+{% load static %}
+{% block content %}
+
+      <main class="container py-6">
+        <div class="container my-5">
+          <div class="row p-1 pb-0 pe-lg-0  align-items-center border shadow-sm">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+              <h1 class="display-1 fw-bold lh-1 text-body-emphasis" style="color: #bd202a;">Standing Committee on Sexual
+                & Reproductive Health and Rights
+                including HIV & AIDS</h1>
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-sm">
+              <a href="{% static 'assets/img/scora.png' %}" data-lightbox="models">
+                <img class="rounded-lg-3" src="{% static 'assets/img/scora.png' %} " alt="" width="100%" height="400" style="object-fit: cover !important;">
+              </a>
+              </div>
+          </div>
+        </div>
+
+        <section class="pt-5" id="actu">
+          <div class="container mb-8">
+            <p>Le Comité permanent sur la santé et les droits sexuels et reproductifs, y compris le VIH et le sida, est un rassemblement de personnes passionnées qui s’engagent à promouvoir la santé et les droits sexuels et reproductifs et qui s’efforcent de créer des changements positifs dans leurs communautés locales.</p>
+            <br> <h1>Historique du
+              Comité</h1> <br>
+            <p>
+              Le Comité permanent sur la santé et les droits sexuels et reproductifs, y compris le VIH et le sida, a été créé en 1992, animé par une forte volonté de participer activement aux interventions concernant le VIH et les infections sexuellement transmissibles (IST) et de soutenir les personnes vivant avec le VIH/sida en œuvrant à réduire la stigmatisation et la discrimination. Il constitue l'un des six comités permanents de la Fédération internationale des associations d'étudiants en médecine, qui sert d'organisme à tous les étudiants en médecine du monde entier. Le SCORA, qui compte un grand nombre de membres - les SCORAngels comme on les appelle - a élargi son champ d'action, centré autour de cinq domaines d'intervention fortement liés à la santé et aux droits sexuels et reproductifs.
+
+ En 2014, le nom du SCORA a changé, passant de Comité permanent sur la santé reproductive, y compris le sida à Comité permanent sur la santé sexuelle et reproductive, y compris le VIH/sida, car il est adapté aux sujets et aux problèmes que le SCORA cible dans ses actions. En 2019, le nom complet du SCORA a été changé en Comité permanent sur la santé et les droits sexuels et reproductifs, y compris le VIH et le sida, afin de mieux refléter le travail développé par le Comité et de distinguer les différences entre le VIH et le sida.</p>
+            <br><h1>Vision</h1> <br>
+            <p>Un monde où chaque individu est habilité à exercer ses droits en matière de santé sexuelle et reproductive de manière égale, sans stigmatisation ni discrimination.</p>
+            <br><h1>Mission</h1> <br>
+            <p>Fournir à nos membres les outils nécessaires pour défendre la santé et les droits sexuels et reproductifs au sein de leurs communautés respectives, dans le respect de leur culture. Cela a été accompli en renforçant les compétences et les connaissances, en dispensant des formations sur l'éducation sexuelle complète et d'autres questions de santé reproductive, en échangeant des idées et des projets, ainsi qu'en élaborant des politiques et en travaillant avec nos partenaires externes afin de créer des changements au niveau local, régional et international.</p>
+            <br><h1>Objectifs</h1><br>
+              <p>
+                <ol>
+                  <li>Sensibiliser sur les sujets liés au VIH et au SIDA et à la santé sexuelle et reproductive.</li>
+                  <li>Réduire la stigmatisation et la discrimination envers les personnes vivant avec le VIH et le sida.</li>
+                  <li>Sensibiliser et accroître les connaissances sur les faits, les recherches scientifiques, les accords mondiaux et les documents concernant la santé sexuelle et reproductive.</li>
+                  <li>Promouvoir une sexualité positive et une vie sexuelle saine.</li>
+                  <li>Défendre des politiques concernant la santé sexuelle et reproductive et représenter les étudiants en médecine du monde entier</li>
+                  <li>Collaborate and facilitate joint actions concerning medical education, public health, and human rights.</li>
+                  <li>Provide tools for capacity building for future healthcare professionals in terms of sexual and reproductive health and rights
+
+                  </li>
+                </ol>
+              </p>
+
+            
+            <h6><a href="https://ifmsa.org/standing-committees/public-health/">en savoir plus</a></h6>
+          </div>
+
+
+          <div class="container">
+           
+            <div class="gallery">
+              <h2>Gallerie d'images</h2>
+              <p>Cliquer sur l'image de votre choix afin de l'afficher</p>
+              <div class="gallery_album">
+                  {%for scora in scora%}
+                  <a href="{{ scora.image.url }}" data-lightbox="models", data-title="{{ scora.decription }}", class="photo">
+                          <img src="{{ scora.image.url }}" alt="">
+                  </a>
+                  {% endfor %}
+              </div>
+          </div>
+          </div><!-- end of .container-->
+  
+  
+        </section>
+      </main>
+      {% include 'base/footer.html' %}
+{% endblock %}

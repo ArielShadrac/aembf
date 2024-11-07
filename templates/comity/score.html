@@ -1,0 +1,77 @@
+{% extends 'base/navbar.html' %}
+{% load static %}
+{% block content %}
+
+      <main class="container py-6">
+        <div class="container my-5">
+          <div class="row p-1 pb-0 pe-lg-0  align-items-center border shadow-sm">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+              <h1 class="display-1 fw-bold lh-1 text-body-emphasis" style="color: #2e4a9c;">Standing Committee on Research Exchange</h1>
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-sm">
+              <a href="{% static 'assets/img/score.png' %}" data-lightbox="models">
+                <img class="rounded-lg-3" src="{% static 'assets/img/score.png' %} " alt="" width="100%" height="400" style="object-fit: cover !important;">
+              </a>
+              </div>
+          </div>
+        </div>
+
+        <section class="pt-5" id="actu">
+          <div class="container mb-8">
+            <p>Malheureusement, de nombreux étudiants en médecine n'ont pas la possibilité de participer à la recherche pendant leurs études. La recherche est essentielle au développement de la médecine et sans elle, la médecine n'aurait jamais pu atteindre le stade où elle se trouve aujourd'hui, avec des méthodes de diagnostic et de traitement innovantes. Associez l'expérience d'amélioration des compétences en recherche à une opportunité d'apprentissage culturel inoubliable et vous obtenez le Comité permanent d'échange de recherche (SCORE) !</p>
+            <br> <h1>Historique du
+              Comité</h1> <br>
+            <p>
+              SCORE a été fondée en 1991 dans le but de donner aux étudiants l'opportunité d'améliorer leurs compétences en recherche dans d'autres contextes d'apprentissage. SCORE regroupe actuellement plus de 65 NMO actives, proposant plus de 3000 projets de recherche pour offrir à plus de 2400 étudiants en médecine du monde entier la possibilité de participer au programme d'échange de recherche de l'IFMSA
+
+              et apprendre les principes de base de la recherche médicale tels que l'étude de la littérature, la collecte de données, la rédaction scientifique, le travail en laboratoire, les statistiques et les aspects éthiques liés à la médecine. Il est important de mentionner que tous les échanges sont initiés et coordonnés entièrement par des étudiants en médecine bénévoles.</p>
+            
+            <br><h1>Mission</h1> <br>
+            <p>Notre mission est d'offrir aux futurs médecins l'opportunité de découvrir la recherche et la diversité dans des pays du monde entier. Nous y parvenons en mettant à disposition un réseau d'étudiants actifs localement et internationalement qui facilitent l'accès à des projets d'échange de recherche à l'échelle mondiale. Grâce à notre programmation et à nos opportunités, nous visons à former à la fois des étudiants sensibles à la culture et des chercheurs qualifiés désireux de façonner le monde scientifique.</p>
+            <br><h1>Objectifs</h1><br>
+              <p>
+                <ol>
+                  <li>Leur permettre de prendre la responsabilité de leur propre apprentissage en fonction de leurs intérêts personnels.</li>
+                  <li>Présentez-leur les principes de base de la recherche médicale</li>
+                  <li>Élargir leurs horizons et leur donner l'occasion d'expérimenter différentes approches en matière de soins de santé, de normes de recherche éthique, de recherche médicale, d'éducation et de traitement.</li>
+                  <li>Améliorer la qualité académique des programmes d'études des étudiants en médecine et obtenir des avantages pédagogiques en matière de connaissances pratiques et théoriques dans le domaine de la recherche médicale.</li>
+                  <li>Faciliter la collaboration et le partenariat entre les universités de médecine, les institutions de recherche et les étudiants en médecine alliés à travers le monde afin de partager et de diffuser les nouvelles réalisations de la recherche médicale.</li>
+                </ol>
+              </p>
+
+            <br><h1>Le programme d'echange du SCORE</h1><br>
+            <p>L'échange de recherche de l'IFMSA est un projet de recherche qui offre aux étudiants en médecine la possibilité d'approfondir leurs connaissances dans le domaine spécifique de leur recherche. Ce programme est officiellement reconnu et soutenu par la faculté de médecine/université et est guidé par un mentor qui présente aux étudiants d'échange les principes de base de la recherche, notamment la recherche documentaire, la collecte de données, la rédaction scientifique, le travail en laboratoire, les statistiques et l'éthique. À la fin du programme, les étudiants peuvent être tenus de préparer un rapport scientifique écrit ou une présentation orale.
+
+              Types de projets de recherche :
+              <ul>
+                <li>  Projet de recherche fondamentale en laboratoire.</li>
+                <li>  Un projet de recherche clinique avec travaux en laboratoire</li>
+                <li> Un projet de recherche clinique sans travaux de laboratoire</li>
+                <li> Projet d'action mondial (GAP)</li>
+              </ul>
+
+              Tous les échanges sont initiés et coordonnés entièrement par des étudiants en médecine bénévoles. Chaque université est représentée par un responsable local des échanges de recherche (LORE), qui facilite les projets au niveau local et organise les préparatifs des étudiants d'échange tels que le logement et la pension. Chaque étudiant d'échange se voit attribuer une personne de contact locale qui sert de guide, de ressource et de liaison sociale, ce qui renforce la communication interculturelle, la compréhension et l'unité entre les étudiants en médecine du monde entier.</p>
+            <h6><a href="https://ifmsa.org/standing-committees/research-exchanges/">en savoir plus</a></h6>
+          </div>
+
+          <div class="container">
+           
+            <div class="gallery">
+              <h2>Gallerie d'images</h2>
+              <p>Cliquer sur l'image de votre choix afin de l'afficher</p>
+              <div class="gallery_album">
+                  {%for score in score%}
+                  <a href="{{ score.image.url }}" data-lightbox="models", data-title="{{ score.decription }}", class="photo">
+                          <img src="{{ score.image.url }}" alt="">
+                  </a>
+                  {% endfor %}
+              </div>
+          </div>
+          </div><!-- end of .container-->
+  
+  
+        </section>
+      </main>
+
+{% include 'base/footer.html' %}
+{% endblock %}

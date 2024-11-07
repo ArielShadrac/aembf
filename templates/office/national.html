@@ -1,0 +1,67 @@
+{% extends 'base/navbar.html' %}
+{% load static %}
+{% block content %}
+
+      <main class="container py-3">
+        <div class="container my-5">
+          <div class="row pb-0 pe-lg-0 pt-lg-5 align-items-center border shadow">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+              <h1 class="hero-title">Notre Bureau National</h1>
+            </div>
+          
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-sm">
+              <a href="{% static 'assets/img/BN.jpg' %}" data-lightbox="models">
+                <img class="rounded-lg-3" src="{% static 'assets/img/BN.jpg' %}" alt="" width="100%" height="500" style="object-fit: cover !important;">
+              </a>
+             </div>
+          
+          
+          </div>
+        </div>
+
+        <section class="pt-5" id="actu">
+
+          <div class="container">
+           
+            <div class="row">
+
+              {% for national in national%}
+              <div class="col-md-4 mb-4">
+                  <div class="card overflow-hidden">
+                    {% if national.photo %}
+                    <a href="{{ national.photo.url }}" data-lightbox="models", data-title="{{ national.name }}">
+                      <img class="rounded-2" src="{{ national.photo.url }}" style="object-fit: cover !important;" height="450" width="100%" alt=""/>
+                    </a>
+                    {% else %}
+                    <img class="rounded-2" src="{% static 'assets/img/Nophoto.jpg'%}" style="object-fit: cover !important;" height="450" width="100%" alt=""/>
+                    {% endif %}
+                    <div class="py-4">
+                      <div class="d-flex align-items-center"> <span class="fs-0 fw-bold text-start">{{ national.name }} </span></div>
+                      <div class="d-flex align-items-center"> <span class="fs-0 fw-medium text-start">{{ national.post}} </span></div>
+                      {% if national.link %}
+                      <div class="d-flex align-items-center"> <span class="fs-0 fw-medium text-start"><a href=" {{ national.link }}">voir Sur Linkedin</a> </span></div>
+                      {% else %}
+                      <div class="d-flex align-items-center"></div>
+                      {% endif %}
+                    </div>
+                  </div>
+              </div>
+              {% empty %}
+
+              <div class="col">
+                <h2 class="d-flex align-items-center" style="font-weight: 80 !important;"> <span style="color: red !important; font-size: 40px;">&times;</span> Pas de contenu pour le moment, Revenez plus tard !</h2>
+              </div>
+              {% endfor %}
+              
+
+            </div>
+          </div><!-- end of .container-->
+  
+        </section>
+
+
+      </main>
+
+      
+{% include 'base/footer.html' %}
+{% endblock %}

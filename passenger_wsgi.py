@@ -1,0 +1,1 @@
+from aembf.wsgi import application

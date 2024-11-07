@@ -1,0 +1,98 @@
+{% extends 'base/navbar.html' %}
+{% load static %}
+{% block content %}
+
+
+      
+      <main class="container py-3" style="height: 100% !important;">
+
+        <div class="px-4 pt-5 my-5 text-center border-bottom">
+          <div class="col-lg-6 mx-auto">
+            <h1 class="hero-title">Bienvenue sur notre Blog</h1>
+            
+          </div>
+          <div class="overflow-hidden" style="max-height: 50vh;">
+            <div class="container px-5">
+              <img src="{% static 'assets/img/Blog.jpg' %}" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+      
+        <div class="row g-5">
+          <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+              Nos Articles
+            </h3>
+
+            <article class="blog-post">
+              
+              {% for posts in posts %}
+              <div class="postcard light blue rounded-1 col-md-12">
+              <a class="postcard__img_link" href="{% url 'post_detail' posts.id %}">
+                
+                <img class="postcard__img rounded-2" src="{{ posts.image.url }}" style="object-fit: cover !important; height: 300px !important; width: 110%;"  alt="Image Title" />
+              
+                <div class="postcard__text t-dark">
+                  <h1 class="postcard__title blue">{{ posts.title|truncatewords:7}}</h1>
+                  <div class="postcard__subtitle small">      
+                    <i class="tag__item fas fa-calendar-alt mr-2"></i> {{ posts.publish }}
+                  </div>
+                  <div class="postcard__bar"></div>
+                  <div class="postcard__preview-txt">{{ posts.resume|truncatewords:10 }}</div>
+                </div>
+              </a>
+            </div>
+            {% empty %}
+            <div class="col">
+              <h2 class="d-flex align-items-center" style="font-weight: 80 !important;"> <span style="color: red !important; font-size: 40px;">&times;</span> Pas d'articles pour le moment, Revenez plus tard !</h2>
+            </div>
+            {% endfor %}
+              
+  
+                
+            </article>
+          </div>
+      
+          <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+              <div class="py-4 mb-3 px-1 bg-body-tertiary">
+                <h4 class="fst-italic">A propos du blog</h4>
+                <p class="mb-0">Ici vous trouverez des articles redigés par nos membres</p>
+              </div>
+      
+              <div>
+                <h4 class="fst-italic static">Posts recents</h4>
+                <ul class="list-unstyled">
+                  {% for posts in posts|slice:":5" %}
+                  <li>
+                  
+                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="{% url 'post_detail' posts.id %}">
+                    <img src="{{ posts.image.url }}" class="rounded-1" height="96" width="110" style="object-fit: cover !important;" alt="">
+                      <div class="col-lg-8">
+                        <h6 class="mb-0">{{ posts.title|truncatewords:5}}</h6>
+                        <small class="text-body-secondary">{{  posts.resume|truncatewords:10 }}</small>
+                        <br>
+                        <small class="text-body-secondary">{{ posts.publish }}</small>
+                      </div>
+                    </a>
+
+                  </li>
+                 {% empty %}
+                  <li>
+                    <div class="col">
+                      <p class="d-flex align-items-center" style="font-weight: 30 !important;"> <span style="color: red !important; font-size: 40px;">&times;</span> Pas d'articles pour le moment</p>
+                    </div>
+                  </li>
+                  {% endfor %}
+
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      
+      </main>
+      {% include 'base/footer.html' %}      
+{% endblock %}

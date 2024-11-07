@@ -1,0 +1,67 @@
+{% extends 'base/navbar.html' %}
+{% load static %}
+{% block content %}
+
+      <main class="container py-6">
+        <div class="container my-5">
+          <div class="row p-1 pb-0 pe-lg-0 align-items-center border shadow-sm">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+              <h1 class="display-1 fw-bold lh-1 text-body-emphasis" style="color: #5f903f;">Standing Committee on Humans Rights
+                & Peace</h1>
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-sm">
+              <a href="{% static 'assets/img/scorp.png' %}" data-lightbox="models">
+                <img class="rounded-lg-3" src="{% static 'assets/img/scorp.png' %} " alt="" width="100%" height="400" style="object-fit: cover !important;">
+              </a>
+              </div>
+          </div>
+        </div>
+
+        <section class="pt-5" id="actu">
+
+          <div class="container mb-8">
+            <br> <h1>Historique du
+              Comité</h1> <br>
+            <p>
+              En 1983, le Comité permanent des réfugiés a été créé dans le but d’attirer l’attention sur les problèmes rencontrés par les populations déplacées et de participer aux efforts de secours. Les membres du comité ont vite compris que ces efforts n’étaient que des palliatifs, alors qu’une solution durable devait s’attaquer à la racine du problème : la violence, les conflits et les violations des droits de l’homme.
+
+              En 1995, le comité a changé de nom pour devenir le Comité permanent des réfugiés et de la paix, et finalement, en 2005, il est devenu le SCORP que nous connaissons aujourd'hui, le Comité permanent des droits de l'homme et de la paix.</p>
+              <br><h1>Vision</h1> <br>
+            <p>SCORP a une vision d’un monde pacifique où tous les individus ont droit à un accès complet et égal à leurs droits humains, où personne n’est laissé pour compte, où la priorité est donnée aux personnes les plus démunies et où l’ensemble de la société, y compris les étudiants en médecine et les travailleurs de la santé, s’unit pour soutenir les groupes vulnérables.</p>
+            <br><h1>Mission</h1> <br>
+            <p>La mission du SCORP est de donner aux étudiants en médecine les moyens et la motivation nécessaires pour promouvoir et protéger activement les droits de l'homme et la paix par le biais du plaidoyer, du renforcement des capacités et de la sensibilisation, et en aidant les étudiants à mener des activités et des projets qui contribuent à créer un monde juste et pacifique.</p>
+            <br><h1>Objectifs</h1><br>
+              <p>
+                <ol>
+                  <li>Améliorer les connaissances des étudiants sur les droits de l’homme, la consolidation de la paix, la réponse humanitaire, le droit international humanitaire et les violations des droits de l’homme ;</li>
+                  <li>Fournir aux étudiants en médecine des outils et des compétences pour agir conformément aux droits de l’homme et à l’éthique, tant en milieu clinique que dans la vie quotidienne ;</li>
+                  <li>Soutenir et créer des activités, telles que des campagnes, le renforcement des capacités et le plaidoyer, visant à concrétiser la vision du comité permanent ;</li>
+                  <li>Faciliter l’élaboration des politiques de la Fédération dans les domaines liés aux droits de l’homme et à la paix ;</li>
+                  <li>Offrir aux membres la possibilité de plaider en faveur de la mise en œuvre de politiques par le biais de leur inclusion dans les lois et cadres nationaux et internationaux ;</li>
+                  <li>Collaborer avec les partenaires concernés à la mise en œuvre des objectifs liés aux droits de l’homme et à la paix.</li>
+                </ol>
+              </p>
+            <h6><a href="https://ifmsa.org/standing-committees/medical-education/">en savoir plus</a></h6>
+          </div>
+
+          <div class="container-fluid">
+           
+            <div class="gallery">
+              <h2>Gallerie d'images</h2>
+              <p>Cliquer sur l'image de votre choix afin de l'afficher</p>
+              <div class="gallery_album">
+                  {%for scorp in scorp%}
+                  <a href="{{ scorp.image.url }}" data-lightbox="models", data-title="{{ scorp.decription }}", class="photo">
+                          <img src="{{ scorp.image.url }}" alt="">
+                  </a>
+                  {% endfor %}
+              </div>
+          </div>
+          </div><!-- end of .container-->
+  
+  
+        </section>
+      </main>
+
+      {% include 'base/footer.html' %}
+{% endblock %}

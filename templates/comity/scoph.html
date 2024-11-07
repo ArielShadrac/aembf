@@ -1,0 +1,80 @@
+{% extends 'base/navbar.html' %}
+{% load static %}
+{% block content %}
+
+
+
+      <main class="container py-6">
+        <div class="container my-5">
+          <div class="row p-1 pb-0 pe-lg-0  align-items-center border shadow-sm">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+              <h1 class="display-1 fw-bold lh-1 text-body-emphasis" style="color: #f47d3b;">Standing Committee on Public Health</h1>
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-sm">
+              <a href="{% static 'assets/img/scoph.png' %}" data-lightbox="models">
+                <img class="rounded-lg-3" src="{% static 'assets/img/scoph.png' %} " alt="" width="100%" height="400" style="object-fit: cover !important;">
+              </a>
+              </div>
+          </div>
+        </div>
+
+        <section class="pt-5" id="actu">
+
+          <div class="container mb-8">
+            <p>Le Comité permanent de la santé publique (SCOPH) rassemble des étudiants en médecine du monde entier pour apprendre, développer des compétences, coopérer, explorer et partager des idées lorsqu'il s'agit de traiter toutes les questions liées à la santé publique, y compris les problèmes de santé mondiale, les politiques de santé, la promotion de la santé et l'éducation, les activités.</p>
+            <br> <h1>Historique du
+              Comité</h1> <br>
+            <p>
+              LLe Comité permanent de la santé publique (SCOPH) rassemble des étudiants en médecine du monde entier pour apprendre, développer des compétences, coopérer, explorer et partager des idées afin de répondre à toutes les questions liées à la santé publique, y compris les questions de santé mondiale, les politiques de santé, la promotion de la santé et les activités éducatives.
+
+              Les étudiants en médecine de l'IFMSA ont formé le Comité permanent de la santé des étudiants (SCOSH) en 1952, animés par une forte volonté de participer activement à la prévention et à l'élaboration de politiques concernant les problèmes de santé. Au cours des années suivantes, la grande variété des activités a conduit à la transformation du SCOSH en Comité permanent de la santé (SCOH) en 1963.
+              
+              En 1983, le nom du Comité a de nouveau changé pour devenir le Comité permanent de la santé publique (SCOPH).
+              
+              Au cours de ces six décennies, SCOPHeroes a mis en œuvre, maintenu et amélioré une grande variété de projets communautaires au niveau local, national et international. Grâce à ces activités, nous poursuivons notre vision d'une société saine et nous développons notre propre potentiel de professionnels de la santé complets et compétents.</p>
+            <br><h1>Vision</h1> <br>
+            <p>Les étudiants en médecine acquièrent les compétences et les connaissances optimales pour contribuer à leur plein potentiel à la création de communautés plus saines en tant qu'étudiants en médecine et futurs prestataires de soins de santé.</p>
+            <br><h1>Mission</h1> <br>
+            <p>Le Comité permanent de santé publique favorise le développement des étudiants en médecine du monde entier en ce qui concerne les questions de santé publique grâce à un réseau international de partage des connaissances, à la gestion de projets, à l'apprentissage communautaire, au renforcement des capacités, au plaidoyer, aux échanges et à l'accès à des opportunités d'apprentissage externes.</p>
+            <br><h1>Objectifs</h1><br>
+              <p>
+                Prévention des maladies au sein de notre société.
+
+Promotion et éducation à la santé au sein de notre société.
+
+Sensibiliser les étudiants en médecine et notre société aux enjeux mondiaux de santé publique.
+
+Défendre les politiques de santé en tant que voix des étudiants en médecine du monde entier.
+
+Développer les compétences et les connaissances des étudiants en médecine en tant que futurs professionnels de la santé.
+
+Travailler en équipe internationale et collaborer avec des organisations de santé publique externes pour utiliser le potentiel de plus d’un million d’étudiants en médecine dans le monde.
+
+Collaborer avec d’autres domaines tels que l’éducation médicale, les droits de l’homme et la santé reproductive.
+              </p>
+
+            
+            <h6><a href="https://ifmsa.org/standing-committees/public-health/">en savoir plus</a></h6>
+          </div>
+
+
+          <div class="container">
+           
+            <div class="gallery">
+              <h2>Gallerie d'images</h2>
+              <p>Cliquer sur l'image de votre choix afin de l'afficher</p>
+              <div class="gallery_album">
+                  {%for scoph in scoph%}
+                  <a href="{{ scoph.image.url }}" data-lightbox="models", data-title="{{ scoph.decription }}", class="photo">
+                          <img src="{{ scoph.image.url }}" alt="">
+                  </a>
+                  {% endfor %}
+              </div>
+          </div>
+          </div><!-- end of .container-->
+  
+  
+        </section>
+      </main>
+      {% include 'base/footer.html' %}
+{% endblock %}

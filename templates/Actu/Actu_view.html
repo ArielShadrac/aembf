@@ -1,0 +1,41 @@
+{% extends 'base/navbar.html' %}
+{% load static %}
+{% block content %}
+
+      <main class="container py-3">
+        <div class="container my-5">
+          <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center border shadow">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+              <h1 class="display-4 fw-bold lh-1 text-body-emphasis">{{ news.title }}</h1>
+              <p class="lead">{{ news.resume }}</p>
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+              <a href="{{ news.image.url }}" data-lightbox="models", data-title="{{ news.decription }}">
+                <img class="rounded-lg-3" src="{{ news.image.url }}" alt="" width="720" height="500" style="object-fit: cover;">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="container my-5" style="overflow-x: hidden !important;">
+         
+          <p style="font-size: 15px !important;">{{ news.content|safe }}</p>
+
+          {% if news.link %}
+          <a href="{{ news.link }}">Cliquez ici pour y accéder</a>
+          {% else %}
+          <p></p>
+          {% endif %}
+         
+        </div>
+      </main>
+
+
+
+      <script type="text/javascript" src="{% static 'vendors/ckeditor/ckeditor-init.js'%}"></script>
+      <script type="text/javascript" src="{% static 'vendors/ckeditor/ckeditor/ckeditor.js'%}"></script>
+      <script>window.CKEDITOR_BASEPATH = '/static/vendors/ckeditor/ckeditor/';</script>
+      <script>window.CKEDITOR_BASEPATH = '/static/vendors/ckeditor/';</script>
+      
+{% include 'base/footer.html' %}
+{% endblock %}
