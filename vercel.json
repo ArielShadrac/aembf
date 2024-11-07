@@ -11,13 +11,7 @@
         "src": "/(.*)",
         "dest": "aembf/wsgi.py"
       }
-    ],
-    "rewrites": [
-      {
-        "src": "/(.*)",
-        "destination": "/api/index.js"
-      }
     ]
-
+   
   }
   
